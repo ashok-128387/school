@@ -19,8 +19,8 @@ export function Header() {
   return (
     <header className="fixed w-full top-0 z-[10000] bg-white/98 dark:bg-slate-900/98 backdrop-blur-md shadow-lg border-b border-gray-100 dark:border-gray-800">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-2 group">
-          <div className="w-52 h-52 flex items-center justify-center group-hover:shadow-lg group-hover:scale-105 transition shadow-md">
+        <div className="flex items-center">
+          <div className="w-16 h-16 md:w-52 md:h-52 flex items-center justify-center">
             <img src="/images/logo.png" alt="Global Academy" className="w-full h-full object-contain" />
           </div>
         </div>
