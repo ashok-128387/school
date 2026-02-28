@@ -52,7 +52,7 @@ export function Hero() {
             }`}
             style={{
               backgroundImage: `url(${banner})`,
-              backgroundSize: 'cover',
+              backgroundSize: 'contain',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}
