@@ -20,7 +20,7 @@ export function Header() {
     <header className="fixed w-full top-0 z-[10000] bg-white/98 dark:bg-slate-900/98 backdrop-blur-md shadow-lg border-b border-gray-100 dark:border-gray-800">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <div className="flex items-center">
-          <div className="w-16 h-16 md:w-52 md:h-52 flex items-center justify-center">
+          <div className="w-16 h-16 md:w-52 md:h-52 flex items-center justify-center bg-transparent">
             <img src="/images/logo.png" alt="Global Academy" className="w-full h-full object-contain" />
           </div>
         </div>
