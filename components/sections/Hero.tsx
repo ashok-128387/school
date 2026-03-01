@@ -20,7 +20,7 @@ export function Hero() {
       setCurrentSlide((prev) => (prev + 1) % banners.length)
     }, 5000)
     return () => clearInterval(timer)
-  }, [])
+  }, [banners.length])
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
