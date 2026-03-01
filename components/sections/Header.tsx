@@ -51,7 +51,7 @@ export function Header() {
             Contact Us
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <button onClick={() => setShowAdmissionForm(true)} className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-2.5 rounded-lg transition font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform">
+          <button onClick={() => setShowAdmissionForm(true)} className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-2.5 rounded-lg transition font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform" suppressHydrationWarning>
             Admissions
           </button>
         </div>
@@ -60,6 +60,7 @@ export function Header() {
         <button
           className="md:hidden p-2"
           onClick={() => setIsOpen(!isOpen)}
+          suppressHydrationWarning
         >
           {isOpen ? (
             <X className="w-6 h-6 text-gray-900 dark:text-white" />
@@ -73,7 +74,7 @@ export function Header() {
       {showAdmissionForm && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" onClick={() => setShowAdmissionForm(false)} style={{ paddingTop: '100px' }}>
           <div className="relative bg-white dark:bg-slate-800 rounded-3xl p-8 max-w-2xl w-full mx-4 shadow-2xl max-h-[90vh] overflow-y-auto" style={{ marginTop: '524px' }} onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setShowAdmissionForm(false)} className="absolute top-4 right-4 w-10 h-10 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center hover:bg-gray-200 dark:hover:bg-slate-600 transition">
+            <button onClick={() => setShowAdmissionForm(false)} className="absolute top-4 right-4 w-10 h-10 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center hover:bg-gray-200 dark:hover:bg-slate-600 transition" suppressHydrationWarning>
               <X className="w-6 h-6 text-gray-600 dark:text-gray-300" />
             </button>
             
@@ -146,6 +147,7 @@ export function Header() {
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 rounded-xl transition transform hover:scale-105 shadow-lg"
+                suppressHydrationWarning
               >
                 Submit Application
               </button>
@@ -200,7 +202,7 @@ export function Header() {
             >
               Contact Us
             </Link>
-            <button onClick={() => setShowAdmissionForm(true)} className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-lg transition font-semibold shadow-lg mt-4">
+            <button onClick={() => setShowAdmissionForm(true)} className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-lg transition font-semibold shadow-lg mt-4" suppressHydrationWarning>
               Admissions
             </button>
           </div>

@@ -43,16 +43,16 @@ export function Hero() {
       </div>
 
       {/* Mobile Carousel Background */}
-      <div className="md:hidden absolute inset-0 w-full h-screen">
+      <div className="md:hidden absolute inset-0 w-full h-full">
         {mobileBanners.map((banner, index) => (
           <div
             key={banner}
-            className={`absolute inset-0 w-full h-screen z-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 w-full h-full z-0 transition-opacity duration-1000 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
             style={{
               backgroundImage: `url(${banner})`,
-              backgroundSize: 'contain',
+              backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}
