@@ -9,18 +9,31 @@ export function Header() {
   const [showAdmissionForm, setShowAdmissionForm] = useState(false)
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', course: '', message: '' })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    alert('Form submitted successfully!')
-    setFormData({ name: '', email: '', phone: '', course: '', message: '' })
-    setShowAdmissionForm(false)
+    try {
+      const response = await fetch('/api/send-admission', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (response.ok) {
+        alert('Application submitted successfully! We will contact you soon.')
+        setFormData({ name: '', email: '', phone: '', course: '', message: '' })
+        setShowAdmissionForm(false)
+      } else {
+        alert('Failed to submit. Please try again.')
+      }
+    } catch (error) {
+      alert('Error submitting form. Please try again.')
+    }
   }
 
   return (
     <header className="fixed w-full top-0 z-[10000] bg-white/98 dark:bg-slate-900/98 backdrop-blur-md shadow-lg border-b border-gray-100 dark:border-gray-800">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <div className="flex items-center">
-          <div className="w-16 h-16 md:w-52 md:h-52 flex items-center justify-center bg-transparent">
+          <div className="w-16 h-16 md:w-52 md:h-52">
             <img src="/images/logo.png" alt="Global Academy" className="w-full h-full object-contain" />
           </div>
         </div>
