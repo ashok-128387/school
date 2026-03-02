@@ -40,31 +40,31 @@ export function Header() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10">
-          <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group">
+          <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
             Home
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group">
+          <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
             About Us
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <Link href="/courses" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group">
+          <Link href="/courses" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
             Courses
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <Link href="/coaching" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group">
+          <Link href="/coaching" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
             Coaching
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <Link href="/why-choose-us" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group">
+          <Link href="/why-choose-us" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
             Why Choose Us
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <Link href="/contact" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group">
+          <Link href="/contact" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
             Contact Us
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <button onClick={() => setShowAdmissionForm(true)} className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-2.5 rounded-lg transition font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform" suppressHydrationWarning>
+          <button onClick={() => setShowAdmissionForm(true)} className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-2.5 rounded-lg transition font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform uppercase" suppressHydrationWarning>
             Admissions
           </button>
         </div>
@@ -175,47 +175,47 @@ export function Header() {
           <div className="px-4 py-6 space-y-3">
             <Link
               href="/"
-              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 border-b border-gray-100 dark:border-gray-800"
+              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 border-b border-gray-100 dark:border-gray-800 uppercase"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 border-b border-gray-100 dark:border-gray-800"
+              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 border-b border-gray-100 dark:border-gray-800 uppercase"
               onClick={() => setIsOpen(false)}
             >
               About Us
             </Link>
             <Link
               href="/courses"
-              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 border-b border-gray-100 dark:border-gray-800"
+              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 border-b border-gray-100 dark:border-gray-800 uppercase"
               onClick={() => setIsOpen(false)}
             >
               Courses
             </Link>
             <Link
               href="/coaching"
-              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 border-b border-gray-100 dark:border-gray-800"
+              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 border-b border-gray-100 dark:border-gray-800 uppercase"
               onClick={() => setIsOpen(false)}
             >
               Coaching
             </Link>
             <Link
               href="/why-choose-us"
-              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 border-b border-gray-100 dark:border-gray-800"
+              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 border-b border-gray-100 dark:border-gray-800 uppercase"
               onClick={() => setIsOpen(false)}
             >
               Why Choose Us
             </Link>
             <Link
               href="/contact"
-              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5"
+              className="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition py-2.5 uppercase"
               onClick={() => setIsOpen(false)}
             >
               Contact Us
             </Link>
-            <button onClick={() => setShowAdmissionForm(true)} className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-lg transition font-semibold shadow-lg mt-4" suppressHydrationWarning>
+            <button onClick={() => setShowAdmissionForm(true)} className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-lg transition font-semibold shadow-lg mt-4 uppercase" suppressHydrationWarning>
               Admissions
             </button>
           </div>
