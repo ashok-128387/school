@@ -40,31 +40,31 @@ export function Header() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10">
-          <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
+          <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase text-sm">
             Home
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
+          <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase text-sm">
             About Us
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <Link href="/courses" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
+          <Link href="/courses" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase text-sm">
             Courses
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <Link href="/coaching" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
+          <Link href="/coaching" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase text-sm">
             Coaching
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <Link href="/why-choose-us" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
+          <Link href="/why-choose-us" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase text-sm">
             Why Choose Us
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <Link href="/contact" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase">
+          <Link href="/contact" className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition relative group uppercase text-sm">
             Contact Us
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <button onClick={() => setShowAdmissionForm(true)} className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-2.5 rounded-lg transition font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform uppercase" suppressHydrationWarning>
+          <button onClick={() => setShowAdmissionForm(true)} className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-2.5 rounded-lg transition font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform uppercase text-sm" suppressHydrationWarning>
             Admissions
           </button>
         </div>
