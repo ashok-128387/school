@@ -22,6 +22,8 @@ export function Hero() {
     return () => clearInterval(timer)
   }, [banners.length])
 
+  // Force rebuild
+
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Desktop Carousel Background */}
