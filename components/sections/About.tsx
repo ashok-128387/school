@@ -6,11 +6,11 @@ import { ArrowRight } from 'lucide-react'
 
 export function About() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+    <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <AnimatedCard animation="slide-left">
-            <div className="relative h-[700px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[400px] md:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/images/0555ec85-73b0-47be-aa91-a102aa31b3bc_removalai_preview.png"
                 alt="Global Academy"
