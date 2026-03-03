@@ -33,7 +33,7 @@ export function Header() {
     <header className="fixed w-full top-0 z-[10000] bg-white/98 dark:bg-slate-900/98 backdrop-blur-md shadow-lg border-b border-gray-100 dark:border-gray-800">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <div className="flex items-center">
-          <div className="w-24 h-24 md:w-52 md:h-52">
+          <div className="w-32 h-32 md:w-52 md:h-52">
             <img src="/images/logo.png" alt="Global Academy" className="w-full h-full object-contain" />
           </div>
         </div>
@@ -86,7 +86,7 @@ export function Header() {
       {/* Admission Form Modal */}
       {showAdmissionForm && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" onClick={() => setShowAdmissionForm(false)}>
-          <div className="relative bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 max-w-2xl w-full mx-4 shadow-2xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+          <div className="relative bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 max-w-2xl w-full m-[30px] shadow-2xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => setShowAdmissionForm(false)} className="absolute top-4 right-4 w-10 h-10 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center hover:bg-gray-200 dark:hover:bg-slate-600 transition" suppressHydrationWarning>
               <X className="w-6 h-6 text-gray-600 dark:text-gray-300" />
             </button>

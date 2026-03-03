@@ -25,7 +25,7 @@ export function Hero() {
   // Force rebuild
 
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden -mt-20 md:mt-0">
+    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden -mt-10 md:mt-0">
       {/* Desktop Carousel Background */}
       <div className="hidden md:block absolute inset-0">
         {banners.map((banner, index) => (
