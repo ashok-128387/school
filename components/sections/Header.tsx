@@ -6,28 +6,6 @@ import { Menu, X } from 'lucide-react'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const [showAdmissionForm, setShowAdmissionForm] = useState(false)
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', course: '', message: '' })
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    try {
-      const response = await fetch('/api/send-admission', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-      if (response.ok) {
-        alert('Application submitted successfully! We will contact you soon.')
-        setFormData({ name: '', email: '', phone: '', course: '', message: '' })
-        setShowAdmissionForm(false)
-      } else {
-        alert('Failed to submit. Please try again.')
-      }
-    } catch (error) {
-      alert('Error submitting form. Please try again.')
-    }
-  }
 
   return (
     <header className="fixed w-full top-0 z-[10000] bg-white/98 dark:bg-slate-900/98 backdrop-blur-md shadow-lg border-b border-gray-100 dark:border-gray-800">
@@ -64,9 +42,9 @@ export function Header() {
             Contact Us
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-full transition-all duration-300" />
           </Link>
-          <button onClick={() => setShowAdmissionForm(true)} className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-2.5 rounded-lg transition font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform uppercase text-sm" suppressHydrationWarning>
+          <Link href="/contact" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-2.5 rounded-lg transition font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform uppercase text-sm">
             Admissions
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -82,92 +60,6 @@ export function Header() {
           )}
         </button>
       </nav>
-
-      {/* Admission Form Modal */}
-      {showAdmissionForm && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 overflow-y-auto" onClick={() => setShowAdmissionForm(false)}>
-          <div className="relative bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 max-w-2xl w-full my-8 shadow-2xl" onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setShowAdmissionForm(false)} className="absolute top-4 right-4 w-10 h-10 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center hover:bg-gray-200 dark:hover:bg-slate-600 transition" suppressHydrationWarning>
-              <X className="w-6 h-6 text-gray-600 dark:text-gray-300" />
-            </button>
-            
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Admission Form</h2>
-            
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Full Name *</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-600"
-                  placeholder="Your name"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Email Address *</label>
-                <input
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-600"
-                  placeholder="your@email.com"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Phone Number *</label>
-                <input
-                  type="tel"
-                  required
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-600"
-                  placeholder="+91 XXXXXXXXXX"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Course Interested *</label>
-                <select
-                  required
-                  value={formData.course}
-                  onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-600"
-                >
-                  <option value="">Select a course</option>
-                  <option value="7th-8th">7th & 8th Standard</option>
-                  <option value="9th">9th Standard</option>
-                  <option value="10th">10th Standard (SSLC)</option>
-                  <option value="11th-12th">11th & 12th Standard (PUC)</option>
-                </select>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Message</label>
-                <textarea
-                  rows={3}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-600 resize-none"
-                  placeholder="Any additional information..."
-                />
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 rounded-xl transition transform hover:scale-105 shadow-lg"
-                suppressHydrationWarning
-              >
-                Submit Application
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
 
       {/* Mobile Menu */}
       {isOpen && (
@@ -215,9 +107,13 @@ export function Header() {
             >
               Contact Us
             </Link>
-            <button onClick={() => setShowAdmissionForm(true)} className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-lg transition font-semibold shadow-lg mt-4 uppercase" suppressHydrationWarning>
+            <Link
+              href="/contact"
+              className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-lg transition font-semibold shadow-lg mt-4 uppercase text-center block"
+              onClick={() => setIsOpen(false)}
+            >
               Admissions
-            </button>
+            </Link>
           </div>
         </div>
       )}
