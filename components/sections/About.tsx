@@ -14,7 +14,7 @@ export function About() {
               <img
                 src="/images/0555ec85-73b0-47be-aa91-a102aa31b3bc_removalai_preview.png"
                 alt="Global Academy"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain md:object-cover"
               />
             </div>
           </AnimatedCard>
