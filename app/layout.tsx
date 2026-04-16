@@ -23,6 +23,8 @@ export const metadata: Metadata = {
   },
 }
 
+const MAINTENANCE_MODE = true
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -60,7 +62,14 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        {children}
+        {MAINTENANCE_MODE ? (
+          <div style={{ backgroundColor: '#000', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '20px' }}>
+            <h1 style={{ color: 'red', fontSize: '3rem', fontWeight: 'bold', marginBottom: '20px' }}>WEBSITE IS DOWN</h1>
+            <p style={{ color: '#fff', fontSize: '1.25rem' }}>We will be back soon. Thank you for your patience.</p>
+          </div>
+        ) : (
+          children
+        )}
         <Analytics />
       </body>
     </html>
