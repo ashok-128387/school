@@ -60,12 +60,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        <div style={{ backgroundColor: '#000', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '20px' }}>
-          <h1 style={{ color: 'red', fontSize: '3rem', fontWeight: 'bold', marginBottom: '20px' }}>WEBSITE IS DOWN 🚨</h1>
-          <p style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '16px' }}>Due to pending payment, this website is currently unavailable.</p>
-          <p style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '24px' }}>Please clear the outstanding dues to restore the website immediately.</p>
-          <p style={{ color: '#aaa', fontSize: '1rem' }}>For support, contact: <a href="https://peakinfosolution.com" style={{ color: '#f87171', textDecoration: 'underline' }}>peakinfosolution.com</a></p>
-        </div>
+        {children}
         <Analytics />
       </body>
     </html>
